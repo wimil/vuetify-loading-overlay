@@ -8,7 +8,8 @@
 export default {
   props: {
     spinnerProps: Object,
-    overlayProps: Object
+    overlayProps: Object,
+    spinner: String
   },
   data() {
     return {

@@ -7,7 +7,7 @@ This package serves to display a load on the whole page, useful when you expect 
 npm -i vuetify-loading-overlay
 yarn add vuetify-loading-overlay
 ```
-this package uses the "@saeris/vue-spinners" package to display the spinners
+this package uses the ["@saeris/vue-spinners"](https://vue-spinners.saeris.io/) package to display the spinners
 
 ## Usage
 ### Vue
