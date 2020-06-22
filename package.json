@@ -1,6 +1,6 @@
 {
   "name": "vuetify-loading-overlay",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Full page screen loading for vuetify",
   "main": "src/index.js",
   "repository": "https://github.com/wimil/vuetify-loading-overlay",

@@ -48,7 +48,7 @@ export default {
         ...this.defaultProps.overlayProps,
         ...this.$props.overlayProps
       };
-      console.log(this.options);
+      //console.log(this.options);
     }
   },
   beforeMount() {
