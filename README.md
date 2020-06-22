@@ -7,7 +7,6 @@ This package serves to display a load on the whole page, useful when you expect 
 npm -i vuetify-loading-overlay
 yarn add vuetify-loading-overlay
 ```
-this package uses the ["@saeris/vue-spinners"](https://vue-spinners.saeris.io/) package to display the spinners
 
 ## Usage
 ### Vue
@@ -17,7 +16,6 @@ Vue.use(LoadingPlugin, {
     //props
     spinnerProps: {},
     overlayProps: {},
-    spinner: 'SyncLoader'
 });
 ```
 
@@ -31,7 +29,6 @@ export default ({ app }, inject) => {
     Loading({
       spinnerProps: {},
       overlayProps: {},
-      spinner: 'SyncLoader'
     })
   );
 };
@@ -78,10 +75,10 @@ the use is simple, you just have to call the api and its methods
 #### snipperProps
 ```javascript
 {
-    color: "red"
+    color: "primary"
 }
 ```
-You can check the properties of the spinner in its [official documentation](https://github.com/Saeris/vue-spinners)
+You can check the properties of the spinner in its [official documentation](https://vuetifyjs.com/en/components/progress-circular/)
 
 #### overlayProps
 ```javascript
@@ -91,9 +88,6 @@ You can check the properties of the spinner in its [official documentation](http
 ```
 You can check the properties of the overlay in its [official documentation](https://vuetifyjs.com/en/components/overlays/)
 
-#### spinner
-defualt: SyncLoader
-you can find more spinner [here](https://vue-spinners.saeris.io/)
 
 ## Author
 **rldev25**

@@ -1,25 +1,32 @@
 <template>
   <v-overlay :value="overlay" v-bind="options.overlayProps">
-    <component :is="options.spinner" v-bind="options.spinnerProps"></component>
+    <v-progress-circular v-bind="options.spinnerProps"></v-progress-circular>
   </v-overlay>
 </template>
 
 <script>
 export default {
+  inheritAttrs: true,
   props: {
     spinnerProps: Object,
-    overlayProps: Object,
-    spinner: String
+    overlayProps: Object
   },
   data() {
     return {
       overlay: false,
       defaultProps: {
-        spinnerProps: {},
-        overlayProps: {},
-        spinner: "SyncLoader"
+        spinnerProps: {
+          color: "primary",
+          value: 100,
+          indeterminate: true,
+          size: 80
+        },
+        overlayProps: {}
       },
-      options: {}
+      options: {
+        spinnerProps: {},
+        overlayProps: {}
+      }
     };
   },
   methods: {
@@ -30,7 +37,18 @@ export default {
       this.overlay = false;
     },
     mergeProps() {
-      this.options = Object.assign(this.defaultProps, this.$props);
+      //merge snipper props
+      this.options.spinnerProps = {
+        ...this.defaultProps.spinnerProps,
+        ...this.$props.spinnerProps
+      };
+
+      //merge overlay props
+      this.options.overlayProps = {
+        ...this.defaultProps.overlayProps,
+        ...this.$props.overlayProps
+      };
+      console.log(this.options);
     }
   },
   beforeMount() {
@@ -44,7 +62,7 @@ export default {
       });
     }
   },
-  created() {
+  mounted() {
     this.mergeProps();
   }
 };

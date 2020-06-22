@@ -1,6 +1,6 @@
 {
   "name": "vuetify-loading-overlay",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Full page screen loading for vuetify",
   "main": "src/index.js",
   "repository": "https://github.com/wimil/vuetify-loading-overlay",
@@ -10,9 +10,7 @@
     "url": "https://github.com/wimil"
   },
   "license": "MIT",
-  "dependencies": {
-    "@saeris/vue-spinners": "^1.0.8"
-  },
+  "dependencies": {},
   "keywords": [
     "vuetify",
     "loading",
